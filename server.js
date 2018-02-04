@@ -291,18 +291,84 @@ let profiles = [
     }
 ];
 
+const rubrik = [
+    niceRubrik = [
+        {
+            value: 0,
+            description: "Wow. You are a truly terrible person. You may want to work on that. Lucky for you...there are a lot of terrible people out there."
+        },
+        {
+            value: 2,
+            description: "Well you aren't Hitler...so you've got that going for you...which is nice?"
+        },
+        {
+            value: 4,
+            description: "Hey nobody typifies \"nobody's perfect\" quite like you do. Congrats!" 
+        },
+        {
+            value: 6,
+            description: "Hey congrats. You are officially a \"nice\" person according to our records. Only just barely...but you are."  
+        },
+        {
+            value: 8,
+            description: "Wow you are quite the nice person. Not like...nauseatingly so yet...but getting there." 
+        },
+        {
+            value: 10,
+            description: "Alright Mr./Mrs./Ms. goody-two-shoes. That's just about enough of all that. Stop trying to be so perfect." 
+        }
+    ],
+    humorRubrik = [
+        {
+            value: 0,
+            description: "You are so unfunny, it's offensive. You are the comedy equivalent of a rubber chicken sitting on a table. Adam Sandler's last 5 movies caused laughs than you have ever caused. And I find that impressive."
+        },
+        {
+            value: 2,
+            description: "You're funny in a \"hey look at that guy/girl fall over! until they notice you have a spiral compound fracture in your leg and feel bad for laughing\" sort of way."
+        },
+        {
+            value: 4,
+            description: "I mean...you aren't a barrel of laughs...but a barrel of monkeys is. What does that have to do with anything? No clue." 
+        },
+        {
+            value: 6,
+            description: "Hey congrats. You are officially a \"funnt\" person according to our records. Only just barely...but you are."  
+        },
+        {
+            value: 8,
+            description: "Have you considered a career in being funny? I bet people laugh at you all day!" 
+        },
+        {
+            value: 10,
+            description: "I'm not sure I could handle being around you for more than a few minutes at a time without vomiting for some reason or another. You're that much fun." 
+        }
+    ]
+]
+
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'landing.html')));
 
 app.get('/survey.html', (req, res) => res.sendFile(path.join(__dirname, 'survey.html')));
 
-app.get('/results.html', (req, res) => res.sendFile(path.join(__dirname, 'results.html')));
+app.get('/results.html', (req, res) => {
+res.sendFile(path.join(__dirname, 'results.html'))
 
-app.post("/results", function(req, res) {
+});
+
+app.post("/results.html", function(req, res) {
     var newUser = req.body;
     profiles.push(newUser);
-  
-    res.json(newReservation);
+    // console.log(profiles);
+    res.json(newUser);
+    console.log(req.body)
+    res.render()
   });
+
+app.get("/results.html", function(req, res){
+    // const currentUser = profiles[profiles.length - 1];
+    // console.log(currentUser);
+    console.log(profiles[0]);
+})
 
 app.listen(PORT, () => console.log("App is listening on port: " + PORT));

@@ -1,3 +1,4 @@
+// const http = require("http");
 //  $("#start-btn").click(() => {
      
 //  })
@@ -25,5 +26,14 @@ $("#submit-btn").click(() => {
     console.log(`Nice: ${nice}`);
     console.log(`Humor: ${humor}`);
     var newProfile = new NewUser($("#name-input"), $("#location-input"), $("#img-input"), nice, humor);
-    console.log(newProfile);
+    // console.log(newProfile);
+    var url = "/results.html"
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: newProfile
+    })
+})
+
+$("#test-button").click(() => {
 })
