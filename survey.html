@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Survey</title>
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <!-- personal style sheet -->
+            <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1 class=" jumbotron d-flex justify-content-center page-header">FRIEND FINDER</h1>
+        </header>
+
+        <section class="container">
+            <h3>Please take this survey to find your closest matches</h3>
+            <h5>Answer as honestly as you can</h5>
+            <form>
+                <div class="form-group row">
+                    <label for="name-input" class="col-12 col-form-label"><legend>Your Name</legend></label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" placeholder="Frederich von Richthofen" id="name-input">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="location-input" class="col-12 col-form-label"><legend>Your Location</legend></label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" placeholder="Ankara, Anatolian Peninsula, Turkey, Europe" id="location-input">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="img-input" class="col-12 col-form-label"><legend>Enter a URL with your picture</legend></label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" value="http://" id="img-input">
+                    </div>
+                </div>
+            </form>
+            <form>
+                <fieldset class="form-group row mar-top-20" id="question1">
+                    <legend class="col-form-legend col-lg-8">1. What gets you up in the moring?</legend>
+                    <div class="col-lg-8">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question0" humor="2" nice="0" checked>
+                                Booze
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question1" humor="0" nice="2">
+                                My desire to make the world a better place
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question2" humor="2" nice="2">
+                                Coffee
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question3" humor="0" nice="0">
+                                I don't morning. Or day...or anything really
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <form>
+                <fieldset class="form-group row mar-top-20" id="question2">
+                    <legend class="col-form-legend col-lg-8">2. What is something you're really good at?</legend>
+                    <div class="col-lg-8">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question4" humor="2" nice="0" checked>
+                                Booze
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question5" humor="0" nice="2">
+                                My desire to make the world a better place
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question6" humor="2" nice="2">
+                                Cage fighting against mini-dolphins
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question7" humor="0" nice="0">
+                                Sleep
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <form>
+                <fieldset class="form-group row mar-top-20" id="question3">
+                    <legend class="col-form-legend col-lg-8">3. What is the first thing people notice about you?</legend>
+                    <div class="col-lg-8">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question8" humor="2" nice="0" checked>
+                                I like booze
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question9" humor="0" nice="2">
+                                My desire to make the world a better place
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question10" humor="2" nice="2">
+                                My calves. And my love of Free Willy
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question11" humor="0" nice="0">
+                                People don't really notice me
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <form>
+                <fieldset class="form-group row mar-top-20" id="question4">
+                    <legend class="col-form-legend col-lg-8">4. What do you do on a typical Friday night?</legend>
+                    <div class="col-lg-8">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question12" humor="2" nice="0" checked>
+                                Booze
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question13" humor="0" nice="2">
+                                Make the world a better place
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question14" humor="2" nice="2">
+                                Netflix and hang....
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question15" humor="0" nice="0">
+                                Sleep
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <form>
+                <fieldset class="form-group row mar-top-20" id="question5">
+                    <legend class="col-form-legend col-lg-8">5. What is something you can't live without?</legend>
+                    <div class="col-lg-8">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question16" humor="2" nice="0" checked>
+                                Booze
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question17" humor="0" nice="2">
+                                My desire to make the world a better place
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question18" humor="2" nice="2">
+                                Coffee
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="question19" humor="0" nice="0">
+                                I don't really know
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+                <button class="btn btn-outline-primary btn-lg" type="button" id="submit-btn"><a href="results.html">Submit</a></button>  
+            </form>
+        </section>
+        <!-- <h1>this is survey</h1> -->
+
+
+
+
+
+
+
+        
+    <!-- bootstrap logic -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- client logic -->
+    <script src="app.js"></script>
+    </body>
+</html>
