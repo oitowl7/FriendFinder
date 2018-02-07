@@ -32,7 +32,10 @@ $("#submit-btn").click(() => {
         type: "POST",
         url: url,
         data: newProfile
+    }).done(function(err, data1) {
+        console.log(data1);
     })
+    console.log(data1);
 })
 
 $("#test-button").click(() => {
