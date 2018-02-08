@@ -10,3 +10,17 @@
 .mar-top-20 {
     margin-top: 20px;
 }
+
+.mar-20 {
+    margin: 20px;
+}
+
+.pad-20 {
+    padding: 20px;
+}
+
+#user-picture,
+#match-picture {
+	max-width: 50%;
+	height: auto;
+}
