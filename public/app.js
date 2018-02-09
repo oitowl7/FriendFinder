@@ -1,3 +1,4 @@
+
 // const http = require("http");
 //  $("#start-btn").click(() => {
      
@@ -35,39 +36,54 @@ $("#submit-btn").click(() => {
     hider();
 })
 
+$("#results-page").on("load", () => {
+    $("#user-profile").hide();
+    $("#match-profile").hide();
+})
+
 $("#check-button").on("click", () =>{
     $.get('/data.js', (data) => {
         const currentUser =  data.profiles[data.profiles.length - 1];
         const profiles = data.profiles;
         const name = currentUser.name;
         const humor = currentUser.humor;
-        let nice;
-        console.log(data.humorRubrik[2].description);
+        let nice = currentUser.nice;
         if (humor === 0 && currentUser.nice == 8){
             nice = 10;
-        } else {
-            nice = currentUser.nice
         }
         shower();
         let match;
         for (var i = 0; i < profiles.length - 1; i++) {
-            if (profiles[i].humor === parseInt(humor)){
-                if (profiles[i].nice === parseInt(nice)) {
+            if (profiles[i].humor == parseInt(humor)){
+                if (profiles[i].nice == parseInt(nice)) {
                     match = profiles[i];
                     break;
                 }
             }
         }
-        $("#user-picture").html(`Name: ${name}`);
-        $("#user-picture").attr("src", currentUser.photoLocation);
-        $("#user-location").html(`Location: ${currentUser.location}, VA`);
-        $("#user-nice").html(`Nice Rating: ${data.niceRubrik[nice/2].description}`);
-        $("#user-humor").html(`Humor Rating: ${data.humorRubrik[humor/2].description}`);
 
-        $("#match-name").html(`Name: ${match.name}`);
-        $("#match-picture").attr("src", match.photoLocation);
-        $("#match-location").html(`Location: ${match.location}, VA`);
-        $("#match-description").text("I can't think of an adequate joke to put here because its 12:15 the day before this is due and I'm really drunk and I've been up for a hwile and have to be up at 5am which will give me 2 hours more sleep than I've had the rest of the week so I'm feeling both quite good an quite bad. SO.......ya. Hello Thomas/Tasha/Elijah.")
+        var userDiv = `<div class="col-lg-1 col-md-1"></div>
+            <div class="col-lg-5 col-md-5 pad-40 border-1" id="user-profile">
+            <h2>Your Profile</h2>
+            <h3 id="user-name">Name: ${currentUser.name}</h3>
+            <img src="${currentUser.photoLocation}" alt="User Picture" id="user-picture">
+            <p id="user-location">Location: ${currentUser.location}</p>
+            <p id="user-nice">Nice Rating: ${data.niceRubrik[nice/2].description}</p>
+            <p id="user-humor">Humor Rating: ${data.humorRubrik[humor/2].description}</p></div>`;
+        var matchDiv = `<div class="col-lg-5 col-md-5 pad-40 border-1" id="match-profile">
+            <h2>Your Match's Profile</h2>
+            <h3 id="match-name">Name: ${match.name}</h3>
+            <img src="${match.photoLocation}" alt="match Picture" id="match-picture">
+            <p id="match-location">Location: ${match.location}</p>
+            <p id="match-description">I can't think of an adequate joke to put here because its 12:15 the day before this is due and I'm really drunk and I've been up for a hwile and have to be up at 5am which will mean that I will probably be comatose or so amped on caffeine that my fingers are shaking which is totally cool except for the fact that comas and shaking over caffeinated fingers tend to cause me not to want to type stuff like descriptions so this will probably make it into my final app and that is just great with me...SO.......ya. Hello Thomas/Tasha/Elijah!!!</p>`;
+        $(".append-area").append(userDiv, matchDiv);
+
+
+
+        // $("#match-name").html(`Name: ${match.name}`);
+        // $("#match-picture").attr("src", match.photoLocation);
+        // $("#match-location").html(`Location: ${match.location}, VA`);
+        // $("#match-description").text("I can't think of an adequate joke to put here because its 12:15 the day before this is due and I'm really drunk and I've been up for a hwile and have to be up at 5am which will give me 2 hours more sleep than I've had the rest of the week so I'm feeling both quite good an quite bad. SO.......ya. Hello Thomas/Tasha/Elijah.")
     })
 })
 

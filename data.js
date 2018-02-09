@@ -215,6 +215,41 @@ let profiles = [
         photoLocation: "https://pbs.twimg.com/media/BiEhYmxIgAAlNSk.jpg",
         nice: 10,
         humor: 10
+    },   
+    {
+        name: "Marcelino Pouros",
+        location: "Janessachester",
+        photoLocation: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW3cYSvNPuwbi2xU2x3rzFCmZkl4GLEUUQHc6WBkrZxMBA_TH-ZA",
+        nice: 8,
+        humor: 10
+    },
+    {
+        name: "Carolanne Bernier",
+        location: "Skyetown",
+        photoLocation: "http://www.topbestpics.com/wp-content/uploads/2017/08/ugly-people-pictures-18-380x250.jpg",
+        nice: 6,
+        humor: 10
+    },
+    {
+        name: "Monique Graham",
+        location: "Karliview",
+        photoLocation: "https://static.rogerebert.com/uploads/review/primary_image/reviews/great-movie-nosferatu-1922/hero_EB19970928REVIEWS08401010345AR.jpg",
+        nice: 4,
+        humor: 10
+    },
+    {
+        name: "Clementina Stroman Jr.",
+        location: "Port Celestine",
+        photoLocation: "https://img.discogs.com/i3jws85EQClZwivelgPgP7iH-NQ=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/A-1754615-1285820544.jpeg.jpg",
+        nice: 2,
+        humor: 10
+    },
+    {
+        name: "Nils Schuppe",
+        location: "Keyonshire",
+        photoLocation: "https://i.stack.imgur.com/Hn2M2.png?s=328&g=1",
+        nice: 0,
+        humor: 10
     }
 ];
 
